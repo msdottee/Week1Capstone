@@ -53,9 +53,7 @@ public class PigLatin {
 				pigLatin.append(seperateWords).append(" ");
 			}
 		}
-
 		return pigLatin.toString();
-
 	}
 
 	private static void willItPigLatin(StringBuilder pigLatin, String seperateWords) {
@@ -72,7 +70,6 @@ public class PigLatin {
 				return false;
 			}
 		}
-
 		return true;
 	}
 
