@@ -66,7 +66,8 @@ public class PigLatin {
 
 	private static boolean isAlphaString(String userString) {
 		for (char currentChar : userString.toCharArray()) {
-			if (!(currentChar >= 'A' && currentChar <= 'Z') && !(currentChar >= 'a' && currentChar <= 'z') && currentChar != '\'') {
+			if (!(currentChar >= 'A' && currentChar <= 'Z') && !(currentChar >= 'a' && currentChar <= 'z') 
+					&& currentChar != '\'' && currentChar != ',' && currentChar != '.' && currentChar != ';') {
 				return false;
 			}
 		}
