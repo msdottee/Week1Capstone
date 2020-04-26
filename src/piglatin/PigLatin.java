@@ -35,7 +35,12 @@ public class PigLatin {
 					translate = false;
 					System.out.println();
 				} else if (answer.isEmpty()) {
-					System.out.println("Please enter a sentence or n/N to exit.");
+					System.out.println("You did not answer if you would like to continue. Please enter (y/n).");
+					answer = scnr.nextLine().toLowerCase();
+					System.out.println();
+					if (answer.contentEquals("n")) {
+						translate = false;
+					}
 				}
 			}
 		}
@@ -66,7 +71,7 @@ public class PigLatin {
 
 	private static boolean isAlphaString(String userString) {
 		for (char currentChar : userString.toCharArray()) {
-			if (!(currentChar >= 'A' && currentChar <= 'Z') && !(currentChar >= 'a' && currentChar <= 'z') 
+			if (!(currentChar >= 'A' && currentChar <= 'Z') && !(currentChar >= 'a' && currentChar <= 'z')
 					&& currentChar != '\'' && currentChar != ',' && currentChar != '.' && currentChar != ';') {
 				return false;
 			}
